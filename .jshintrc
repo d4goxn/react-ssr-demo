@@ -1,0 +1,6 @@
+{
+    "strict": true,
+    "browserify": true,
+    "node": true,
+    "quotmark": true
+}
