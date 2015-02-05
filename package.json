@@ -14,7 +14,9 @@
     "morgan": "^1.5.1",
     "node-jsx": "^0.12.4",
     "react": "^0.12.2",
-    "react-frozenhead": "^0.3.0"
+    "react-async": "^2.0.1",
+    "react-frozenhead": "^0.3.0",
+    "react-router-component": "^0.23.3"
   },
   "devDependencies": {
     "browserify": "^8.1.3",
