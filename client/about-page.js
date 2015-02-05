@@ -1,10 +1,9 @@
 var React = require( 'react' ),
-	Layout = require( './layout' );
+	Layout = require( './layout' ),
+	TitleMixin = require( './title-mixin' );
 
 var AboutPage = module.exports = React.createClass({
-	componentDidMount: function() {
-		document.title = 'About';
-	},
+	mixins: [ TitleMixin( 'About' )],
 
 	render: function() {
 		return (
