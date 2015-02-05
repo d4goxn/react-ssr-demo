@@ -6,12 +6,14 @@ var express = require( 'express' ),
 	path = require( 'path' ),
 	url = require( 'url' ),
 	logger = require( 'morgan' ),
+	compress = require( 'compression' )(),
 	util = require( 'util' ),
 	renderApp = require( './render-app' );
 
 var server = express();
 
 server.use( logger( 'dev' ));
+server.use( compress );
 server.use( express.static( path.join( __dirname, '../static' )));
 
 server.get( '/', function( req, res ) {

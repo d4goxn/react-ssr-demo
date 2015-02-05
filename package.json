@@ -9,6 +9,7 @@
   "author": "Dan <daniel.ross@kasra.co>",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.4.0",
     "express": "^4.11.2",
     "morgan": "^1.5.1",
     "node-jsx": "^0.12.4",
