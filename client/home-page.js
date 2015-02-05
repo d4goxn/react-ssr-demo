@@ -1,13 +1,10 @@
 var React = require( 'react' ),
-	Layout = require( './layout' ),
-	TitleMixin = require( './title-mixin' );
+	Layout = require( './layout' );
 
 var HomePage = module.exports = React.createClass({
-	mixins: [ TitleMixin( 'Home' )],
-
 	render: function() {
 		return (
-			<Layout>
+			<Layout title='Home'>
 				<p className='ok'>ok</p>
 			</Layout>
 		);

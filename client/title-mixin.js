@@ -1,7 +1,5 @@
-var TitleMixin = module.exports = function( title ) {
-	return {
-		componentDidMount: function() {
-			document.title = title;
-		}
-	};
+var TitleMixin = module.exports = {
+	componentDidMount: function() {
+		document.title = this.props.title;
+	}
 };
