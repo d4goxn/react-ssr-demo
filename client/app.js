@@ -1,30 +1,28 @@
 'use strict';
 
 var React = require( 'react' ),
-	FrozenHead = require( 'react-frozenhead' ),
 	util = require( 'util' ),
+	Nav = require( './nav' ),
 	HomePage = require( './home-page' ),
 	AboutPage = require( './about-page' ),
 	router = require( 'react-router-component' ),
 	Pages = router.Pages,
-	Location = router.Location;
+	Page = router.Page;
 
 var App = module.exports = React.createClass({
 	displayName: 'App',
 
 	render: function() {
-		console.log( this.props );
-		var props = this.props.path; // How did all of this.props end up inside this.props.path?
-
 		return (
 			<html>
 				<head>
-					<title>{ props.title }</title>
+					<title>{ this.props.title }</title>
+					<meta name='description' value='OpenGraph meta tags for user submitted content coming soon' />
 					<link rel='stylesheet' type='text/css' href='/style.css' />
 				</head>
-				<Pages path={ props.path }>
-					<Location path='/' handler={ HomePage } />
-					<Location path='/about' handler={ AboutPage } />
+				<Pages path={ this.props.path }>
+					<Page path='/' handler={ HomePage } />
+					<Page path='/about' handler={ AboutPage } />
 				</Pages>
 				<script src='/index.js' />
 			</html>

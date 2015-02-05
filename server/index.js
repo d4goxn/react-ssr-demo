@@ -18,25 +18,13 @@ server.get( '/', function( req, res ) {
 	var urlPath = url.parse( req.url ).pathname;
 	util.inspect( urlPath );
 
-	res.send( renderApp({
-		path: urlPath,
-		title: 'Home',
-		meta: {
-			description: 'An isomorphic ReactJS web app that is user friendly and machine readable.'
-		}
-	}));
+	res.send( renderApp( urlPath, 'Home' ));
 });
 
 server.get( '/about', function( req, res ) {
 	var urlPath = url.parse( req.url ).pathname;
 
-	res.send( renderApp({
-		path: urlPath,
-		title: 'About',
-		meta: {
-			description: 'What is this thing?'
-		}
-	}));
+	res.send( renderApp( urlPath, 'About' ));
 });
 
 var host = server.listen( 3000, function() {

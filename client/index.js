@@ -4,6 +4,6 @@ var React = require( 'react' );
 var App = require( './app' );
 
 React.render(
-	<App />,
-	document.firstElementChild
+	<App title={ document.title } />,
+	document
 );

@@ -1,17 +1,16 @@
 var React = require( 'react' ),
-	Nav = require( './nav' );
+	Layout = require( './layout' );
 
-var HomePage = module.exports = React.createClass({
+var AboutPage = module.exports = React.createClass({
 	componentDidMount: function() {
 		document.title = 'About';
 	},
 
 	render: function() {
 		return (
-			<body>
-				<Nav />
+			<Layout>
 				<h2>About</h2>
-			</body>
+			</Layout>
 		);
 	}
 });

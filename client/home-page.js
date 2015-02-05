@@ -1,5 +1,5 @@
 var React = require( 'react' ),
-	Nav = require( './nav' );
+	Layout = require( './layout' );
 
 var HomePage = module.exports = React.createClass({
 	componentDidMount: function() {
@@ -8,10 +8,9 @@ var HomePage = module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<body>
-				<Nav />
-				<p class='ok'>ok</p>
-			</body>
+			<Layout>
+				<p className='ok'>ok</p>
+			</Layout>
 		);
 	}
 });
