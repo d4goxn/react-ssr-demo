@@ -20,13 +20,13 @@ server.get( '/', function( req, res ) {
 	var urlPath = url.parse( req.url ).pathname;
 	util.inspect( urlPath );
 
-	res.send( renderApp( urlPath, 'Home' ));
+	res.send( renderApp( urlPath, 'Home', 'OpenGraph meta tags for user submitted content coming soon' ));
 });
 
 server.get( '/about', function( req, res ) {
 	var urlPath = url.parse( req.url ).pathname;
 
-	res.send( renderApp( urlPath, 'About' ));
+	res.send( renderApp( urlPath, 'About', 'Nothing to see here, move along' ));
 });
 
 var host = server.listen( 3000, function() {

@@ -17,7 +17,7 @@ var App = module.exports = React.createClass({
 			<html>
 				<head>
 					<title>{ this.props.title }</title>
-					<meta name='description' value='OpenGraph meta tags for user submitted content coming soon' />
+					<meta name='description' value={ this.props.metaDescription } />
 					<link rel='stylesheet' type='text/css' href='/style.css' />
 				</head>
 				<Pages path={ this.props.path }>

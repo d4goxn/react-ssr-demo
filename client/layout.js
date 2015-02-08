@@ -7,7 +7,7 @@ var Layout = module.exports = React.createClass({
 	componentDidMount: function() {
 		// componentDidMount is only used client side, so it is safe to assume that document is available
 		document.title = this.props.title;
-	}
+	},
 
 	render: function() {
 		return (
